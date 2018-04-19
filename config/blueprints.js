@@ -19,7 +19,7 @@ module.exports.blueprints = {
 
   // actions: false,
 
-
+  prefix: '/api',
   /***************************************************************************
   *                                                                          *
   * Automatically expose RESTful routes for your models?                     *
