@@ -1,0 +1,22 @@
+{
+  "name": "bolsa",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "anonymous node/sails user"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.10",
+    "angular-bootstrap": "^2.5.0",
+    "angular-route": "^1.6.10"
+  }
+}
