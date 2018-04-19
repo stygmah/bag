@@ -15,10 +15,10 @@
   </head>
 
   <body>
-    <div ng-app="bolsaApp">
-      <ng-view></ng-view>
+    <div ng-app="bolsaApp" ng-controller="AppCtrl">
+      <%- body %>
     </div>
-    <%- body %>
+    
     <% /* Auto-injected «script» tags: */ %>
     <!--SCRIPTS-->
     <script src="/dependencies/sails.io.js"></script>

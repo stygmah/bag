@@ -1,3 +1,3 @@
-bolsaApp.controller('AppCtrl',['$scope',function($scope){
+bolsaApp.controller('AppCtrl',['$scope','$rootScope',function($scope,$rootScope){
 
 }]);
