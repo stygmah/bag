@@ -30,9 +30,9 @@ module.exports.http = {
     ***************************************************************************/
 
     order: [
+      'custom',
       'cookieParser',
       'session',
-      'uploadMiddleware',
       'bodyParser',
       'compress',
       'poweredBy',
@@ -41,20 +41,11 @@ module.exports.http = {
       'favicon',
       
     ],
-    uploadMiddleware : (req,res,next)=>{
-      var multer = require('multer');
-
-      var storage = multer.diskStorage({
-          destination: './uploads/',
-          filename: function (req, file, cb) {
-            cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
-          }
-      })
-      var upload = multer({ storage: storage });
-      console.log('LAUNCHED')
-      return upload.single('file');
+    custom : (req,res,next)=>{
+      // res.header("Access-Control-Allow-Origin", "http://localhost");
+      // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
     }
-
     /***************************************************************************
     *                                                                          *
     * The body parser that will handle incoming multipart HTTP requests.       *
