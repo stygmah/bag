@@ -6,7 +6,7 @@
  */
 module.exports = {
     upload: (req,res)=>{
-      req.file('excel').upload(function (err, uploadedFiles) {
+      req.file('file').upload(function (err, uploadedFiles) {
         res.send();
       });
     }

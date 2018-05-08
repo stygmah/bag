@@ -1,7 +1,7 @@
 bolsaApp.controller('UploadCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
     
     $scope.uploadFile = function(){
-        var uploadUrl = "/Upload";
+        var uploadUrl = "/api/Upload";
         fileUpload.uploadFileToUrl($scope.fd, uploadUrl);
     };
     $scope.addFile = function(files){
