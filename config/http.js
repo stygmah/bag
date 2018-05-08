@@ -29,17 +29,31 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    order: [
+      'cookieParser',
+      'session',
+      'uploadMiddleware',
+      'bodyParser',
+      'compress',
+      'poweredBy',
+      'router',
+      'www',
+      'favicon',
+      
+    ],
+    uploadMiddleware : (req,res,next)=>{
+      var multer = require('multer');
 
+      var storage = multer.diskStorage({
+          destination: './uploads/',
+          filename: function (req, file, cb) {
+            cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
+          }
+      })
+      var upload = multer({ storage: storage });
+      console.log('LAUNCHED')
+      return upload.single('file');
+    }
 
     /***************************************************************************
     *                                                                          *

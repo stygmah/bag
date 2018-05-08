@@ -30,7 +30,7 @@ module.exports.routes = {
   "r|^\/(?!.*api).*|":{
     view: 'pages/homepage',
     skipAssets: true
-  }
+  },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
@@ -46,7 +46,7 @@ module.exports.routes = {
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-
+  'POST /Upload': {controller: "UploadController", action:"upload"},
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
