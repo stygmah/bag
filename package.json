@@ -10,12 +10,14 @@
     "@sailshq/socket.io-redis": "^5.2.0",
     "async": "2.0.1",
     "excel-as-json": "^2.0.2",
+    "mongoose": "^5.0.17",
     "node-excel-to-json": "0.0.3",
     "sails": "^1.0.1",
     "sails-hook-apianalytics": "^2.0.0",
     "sails-hook-organics": "^0.13.0",
     "sails-hook-orm": "^2.0.0-16",
-    "sails-hook-sockets": "^1.4.0"
+    "sails-hook-sockets": "^1.4.0",
+    "sails-mongoose": "0.0.3"
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3",
