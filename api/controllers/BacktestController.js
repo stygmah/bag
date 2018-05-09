@@ -9,6 +9,13 @@ const backtestSchema = require('../models/Backtest');
 
 module.exports = {
   addMany: (req,res)=>{
+
+    var Backtest = db.model('Backtest',backtestSchema);
+    Backtest.create().exec((err,doc)=>{
+      res.send(doc);
+    })
+  },
+  getMany: (req,res)=>{
     var Backtest = db.model('Backtest',backtestSchema);
     Backtest.find({}).exec((err,doc)=>{
       res.send(doc);

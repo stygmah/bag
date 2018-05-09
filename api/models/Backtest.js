@@ -7,20 +7,19 @@
 const Schema = require('mongoose').Schema;
 
 var Backtest = new Schema({
-  ticker: {type:String, required:true},
-  nombre: String,
-  isin: String,
-  year: Number,
-  pais: String,
-  margenBeneficios: Number,
-  margenBeneficioMinus1: Number,
-  momentum: Number,
-  momentum: Number,
-  totalAssets: Number,
-  valentum: Number,
-  valqual: Number,
-  value: Number,
-  volatilidad260: Number
+  Ticker: {type:String},
+  Nombre: Schema.Types.Mixed,
+  Isin: Schema.Types.Mixed,
+  Year: Schema.Types.Mixed,
+  Pais: Schema.Types.Mixed,
+  MargenBeneficios: Schema.Types.Mixed,
+  MargenBeneficioMinus1: Schema.Types.Mixed,
+  ['P MOMENTUM']: Schema.Types.Mixed,
+  TotalAssets: Schema.Types.Mixed,
+  VALENTUM: Schema.Types.Mixed,
+  VALQUAL: Schema.Types.Mixed,
+  VALUE: Schema.Types.Mixed,
+  Volatilidad260: Schema.Types.Mixed
 },{
   collection: 'backtest'
 });
