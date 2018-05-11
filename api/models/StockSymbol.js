@@ -8,7 +8,8 @@ const Schema = require('mongoose').Schema;
 
 var StockSymbol = new Schema({
   ticker: {type:String, required:true},
-  description: Schema.Types.Mixed
+  fullSymbol: String,
+  description: String
 },{
   collection: 'stockSymbol'
 });
