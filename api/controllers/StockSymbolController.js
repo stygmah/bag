@@ -10,7 +10,7 @@ const stockSymbolSchema = require('../models/StockSymbol');
 
 module.exports = {
   create: (req,res)=>{
-    buildJson();
+    var collection = require('../services/tickers');
     var StockSymbol = db.model('StockSymbol',stockSymbolSchema);
     StockSymbol.insertMany(collection,null,(error,doc)=>{
         if(error){
