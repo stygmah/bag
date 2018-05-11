@@ -31,8 +31,10 @@ module.exports.datastores = {
   ***************************************************************************/
   default: {
     adapter: 'sails-mongo',
-    url: 'localhost',
-    port: 27017,
-    database:'testBolsa'
+    url: 'ds219100.mlab.com',
+    port: 19100,
+    database:'gon-test',
+    user:'test',
+    password:'a1b2c3d4'
   },
 };
